@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mini Notes</string>
+    <string name="error">Error</string>
+    <string name="errorSubject">Error: Enter a Subject</string>
+    <string name="errorNote">Error: Enter a Note</string>
+    <string name="errorLongNote">Error: Note is Too Long</string>
+    <string name="noteSaved">Note Saved</string>
+    <string name="errorDate">Error: Enter Date</string>
+    <string name="subject">Subject:</string>
+    <string name="enter_subject">Enter Subject</string>
+    <string name="today_s_date">Today\'s Date</string>
+    <string name="note">Note:</string>
+    <string name="enter_note_here">Enter Note Here</string>
+    <string name="search_by">Search by:</string>
+    <string name="date">Date</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.scott.mininotes.ViewNoteActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/textStyle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/search_by" />
+
+    <RadioGroup
+        android:id="@+id/searchCriteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="35dp">
+
+        <RadioButton
+            android:id="@+id/radio_subject"
+            style="@style/textStyle"
+            android:checked="true"
+            android:text="@string/subject" />
+
+        <AutoCompleteTextView
+            android:id="@+id/subject_entry"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"/>
+
+        <RadioButton
+            android:id="@+id/radio_date"
+            style="@style/textStyle"
+            android:text="@string/date" />
+
+        <AutoCompleteTextView
+            android:id="@+id/date_entry"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:maxLines="1"
+            android:textSize="15sp"/>
+
+    </RadioGroup>
+    <!-- go button -->
+
+
+    <!-- db contents -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignStart="@id/searchCriteria"
+        android:layout_below="@id/searchCriteria">
+
+        <TextView
+            android:id="@+id/db_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <ImageButton
+        android:contentDescription="@string/search_by"
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="showDataByColumn"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+
+</RelativeLayout>

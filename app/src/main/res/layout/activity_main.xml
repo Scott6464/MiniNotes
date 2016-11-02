@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.scott.mininotes.MainActivity">
+
+    <TextView
+        style="@style/textStyle"
+        android:text="@string/subject"
+        android:id="@+id/textView"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/subject_text"
+        android:hint="@string/enter_subject"
+        android:layout_toEndOf="@id/textView"
+        android:layout_alignBaseline="@id/textView"/>
+
+    <TextView
+        android:text="@string/today_s_date"
+        style="@style/textStyle"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/date_text" />
+
+    <TextView
+        style="@style/textStyle"
+        android:text="@string/note"
+        android:layout_below="@+id/date_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/textView1"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_toEndOf="@id/textView1"
+        android:layout_alignBaseline="@id/textView1"
+        android:id="@+id/note_text"
+        android:hint="@string/enter_note_here"
+        tools:maxLines="4" />
+
+    <ImageButton
+        android:contentDescription="@string/noteSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:layout_below="@+id/note_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/imageButton"
+        tools:onClick="saveNote"
+        android:onClick="saveNote" />
+
+
+</RelativeLayout>
